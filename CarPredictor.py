@@ -1,6 +1,6 @@
 import streamlit as st  #importing libraries
 import pickle 
-model = pickle.load(open('/Users/rajeevjoshi/Car Price Predictor/RF_model.pkl','rb'))  #importing the model that was trained using Random forest algo
+model = pickle.load(open('RF_model.pkl','rb'))  #importing the model that was trained using Random forest algo
 
 def main(): #defining main function
     string = "Car Price Predictor"
