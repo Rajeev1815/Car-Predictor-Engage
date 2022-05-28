@@ -29,13 +29,12 @@ def main(): #defining main function
                )
     st.write('')
     st.write('')
-
+    with st.spinner('Prediction is being done!'):
+        time.sleep(8)  # Loading spinner call so that user does not get bored
     power = st.number_input('The Engine Power ( in hp ):', 33,779, step = 4 , key = 'Power') #Taking numer input as power with upper and lower limit as 779 and 33 respectively
     displacement = st.number_input('The Engine Capacity ( in cc ):', 624 , 6752 , step = 8 , key = 'Displacement') #Taking displacement as input through number input with respective limits
     mileage = st.number_input('The mileage of car :', 3.4 , 28.4 , step = 0.5 , key = 'Mileage') #mileage as number input with respective limits
     airbags = st.radio("Number of airbags :",(0,1,2,3,4,5,6,7,8,9,10,14), key = 'Airbags') #number of airbags as radio input
-    with st.spinner('Prediction is being done!'):
-         time.sleep(8)  # Loading spinner call so that user does not get bored
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True) #For radio buttons to be horizontal
     seats = st.radio("Number of seats :",(2,4,5,6,7,8,9), key = 'Seats') #seats as radio input
     Manufacturer_Audi = st.selectbox('Which company do you want?', ('Tata', 'Datsun', 'Renault', 'Maruti Suzuki', 'Hyundai', 'Premier', 'Toyota',
